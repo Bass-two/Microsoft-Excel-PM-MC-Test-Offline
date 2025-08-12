@@ -1,199 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Microsoft Excel PM MC Test Offline</title>
-<style>
-:root{
-  --accent:#107C41;
-  --card-bg:#fff;
-  --page-bg:#f4f4f4;
-  --muted:#666;
-  --maxw:980px;
-}
-body{
-  margin:0;
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  background:var(--page-bg);
-  color:#111;
-}
-.topbar {
-  background:var(--accent);
-  color:white;
-  padding:22px 16px;
-  text-align:center;
-  font-size:1.25rem;
-  font-weight:600;
-}
-.wrap{
-  max-width:var(--maxw);
-  margin:28px auto;
-  padding:0 16px;
-}
-.card{
-  background:var(--card-bg);
-  border-radius:10px;
-  box-shadow:0 6px 18px rgba(16,124,65,0.06);
-  padding:28px;
-}
-.intro{
-  color:var(--muted);
-  margin-bottom:18px;
-  font-size:0.95rem;
-}
-.meta{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-bottom:18px;
-}
-.meta .field{
-  flex:1 1 260px;
-}
-label.input-label{
-  display:block;
-  font-weight:600;
-  margin-bottom:6px;
-}
-input[type="text"], input[type="email"]{
-  width:100%;
-  padding:10px 12px;
-  border-radius:8px;
-  border:1px solid #d0d0d0;
-  font-size:0.98rem;
-}
-hr.sep{ border:none; height:1px; background:#eef2f0; margin:20px 0; }
-.question{
-  margin-bottom:14px;
-  padding:12px;
-  border-radius:8px;
-  background:#fcfffd;
-  border:1px solid #f0f6f1;
-}
-.q-header{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  margin-bottom:8px;
-  flex-wrap:wrap;
-}
-.q-number{
-  min-width:36px;
-  height:36px;
-  border-radius:50%;
-  background:var(--accent);
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:700;
-}
-.q-text{
-  font-weight:600;
-  font-size:0.98rem;
-  flex:1 1 auto;
-}
-.options{
-  margin-top:8px;
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-.option-label{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  padding:10px 12px;
-  border-radius:8px;
-  border:1px solid #eee;
-  cursor:pointer;
-}
-.option-label:hover{ background:#fafdf9; }
-.option-label input{ transform:scale(1.02); margin:0; }
-.submit-row{
-  margin-top:20px;
-  display:flex;
-  justify-content:flex-end;
-  gap:12px;
-  align-items:center;
-}
-button.submit-btn{
-  background:var(--accent);
-  color:white;
-  padding:12px 18px;
-  border-radius:8px;
-  border:none;
-  font-weight:700;
-  cursor:pointer;
-  font-size:1rem;
-}
-button.submit-btn:hover{ background:#0e6b39; }
-.note{ color:var(--muted); font-size:0.95rem; margin-top:6px; }
-
-.result-box{
-  background:white;
-  border-radius:8px;
-  padding:20px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-  margin-top:20px;
-  text-align:center;
-}
-.result-box h2{
-  margin:0;
-  color:var(--accent);
-}
-.result-box p{
-  margin:8px 0 0;
-  font-size:1.1rem;
-}
-@media (max-width:720px){
-  .meta{ flex-direction:column; }
-  .submit-row{ justify-content:center; }
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Datamaker MS-Word Offline Multiple Choice Test</title>
+  <style>
+    :root{ --accent:#107C41; --bg:#f7f7f7; --card:#fff; --muted:#666; --maxw:980px; }
+    body{ margin:0; font-family: "Segoe UI", Roboto, Arial, sans-serif; background:var(--bg); color:#111; -webkit-font-smoothing:antialiased;}
+    .topbar { background:var(--accent); color:white; padding:18px 12px; text-align:center; font-size:1.15rem; font-weight:700; }
+    .wrap{ max-width:var(--maxw); margin:26px auto; padding:0 16px; }
+    .card{ background:var(--card); border-radius:10px; padding:22px; box-shadow:0 6px 18px rgba(16,124,65,0.06); }
+    .intro{ color:var(--muted); margin-bottom:18px; }
+    .meta{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:18px; }
+    .meta .field{ flex:1 1 300px; }
+    label.input-label{ display:block; font-weight:600; margin-bottom:6px; }
+    input[type="text"], input[type="email"]{ width:100%; padding:10px 12px; border-radius:8px; border:1px solid #d0d0d0; font-size:0.95rem; }
+    hr.sep{ border:none; height:1px; background:#eef2f0; margin:20px 0; }
+    .question{ margin-bottom:14px; padding:12px; border-radius:8px; background:#fcfffd; border:1px solid #f0f6f1; }
+    .q-header{ display:flex; gap:12px; align-items:center; margin-bottom:8px; flex-wrap:wrap; }
+    .q-number{ min-width:36px; height:36px; border-radius:50%; background:var(--accent); color:white; display:flex; align-items:center; justify-content:center; font-weight:700; }
+    .q-text{ font-weight:600; font-size:0.98rem; flex:1 1 auto; }
+    .options{ margin-top:8px; display:flex; flex-direction:column; gap:8px; }
+    .option-label{ display:flex; gap:12px; align-items:center; padding:10px 12px; border-radius:8px; border:1px solid #eee; cursor:pointer; user-select:none; }
+    .option-label:hover{ background:#fafdf9; }
+    .option-label input{ transform:scale(1.02); margin:0; }
+    .submit-row{ margin-top:20px; display:flex; justify-content:flex-end; gap:12px; align-items:center; }
+    button.submit-btn{ background:var(--accent); color:white; padding:12px 18px; border-radius:8px; border:none; font-weight:700; cursor:pointer; }
+    button.submit-btn:hover{ background:#0e6b39; }
+    .note{ color:var(--muted); font-size:0.95rem; margin-top:6px; }
+    #result{ margin-top:14px; font-weight:700; text-align:center; }
+    @media (max-width:720px){ .meta{ flex-direction:column; } .submit-row{ justify-content:center; } }
+  </style>
 </head>
 <body>
-<div class="topbar">Microsoft Excel PM MC Test Offline</div>
+  <div class="topbar">Datamaker MS-Word Offline Multiple Choice Test</div>
 
-<div class="wrap">
-  <div class="card">
-    <p class="intro">
-      Hi! Please complete this quiz to help us evaluate your understanding of Excel concepts.<br>
-      <strong>Total: 52 Questions</strong>
-    </p>
+  <div class="wrap">
+    <div class="card">
+      <p class="intro">
+        Hi! Please complete this quiz to help us evaluate your understanding. This version works offline and will download your responses as a CSV file when you submit.
+        <br><strong>Total: 52 Questions</strong>
+      </p>
 
-    <form id="testForm" autocomplete="off">
-      <div class="meta">
-        <div class="field">
-          <label class="input-label" for="name">Name *</label>
-          <input id="name" name="name" type="text" required />
+      <form id="wordForm" autocomplete="off">
+        <!-- Q1 & Q2 fixed -->
+        <div class="meta">
+          <div class="field">
+            <label class="input-label" for="name">Q1 — Name *</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div class="field">
+            <label class="input-label" for="email">Q2 — Email *</label>
+            <input id="email" name="email" type="email" required />
+          </div>
         </div>
-        <div class="field">
-          <label class="input-label" for="email">Email *</label>
-          <input id="email" name="email" type="email" required />
+
+        <hr class="sep" />
+
+        <div id="questionsContainer"></div>
+
+        <div class="submit-row">
+          <div class="note">Note: Leaving or refreshing will restart the test and reshuffle questions.</div>
+          <button type="submit" class="submit-btn">Submit</button>
         </div>
-      </div>
 
-      <hr class="sep" />
-      <div id="questionsContainer"></div>
-
-      <div class="submit-row">
-        <div class="note">Note: Refreshing will reshuffle questions.</div>
-        <button type="submit" class="submit-btn">Submit</button>
-      </div>
-    </form>
-
-    <div id="resultBox" class="result-box" style="display:none;">
-      <h2>Quiz Completed</h2>
-      <p id="scoreText"></p>
+        <div id="result"></div>
+        <p class="note">This offline file stores results as a downloaded CSV. No data is sent to the internet.</p>
+      </form>
     </div>
   </div>
-</div>
 
 <script>
-// QUESTIONS
-const mcQuestions = [{ id: 3, text: "What is the keyboard shortcut to open the Filter menu in Excel?", options: [
+/* ================= CONFIG ================= */
+/* All MCQs (Q3..Q52) in {id, text, options:[{t:"", c:true/false}]} format */
+const mcQuestions = [
+ { id: 3, text: "What is the keyboard shortcut to open the Filter menu in Excel?", options: [
         {t:"CTRL + F", c:false},
         {t:"CTRL + L", c:false},
         {t:"CTRL + SHIFT + L", c:true},
@@ -492,84 +373,126 @@ const mcQuestions = [{ id: 3, text: "What is the keyboard shortcut to open the F
         {t:"TEXT(A1, \"YYYY\")", c:false},
         {t:"DATEVALUE(A1)", c:false},
         {t:"=2025", c:false}
-      ]}
+      ]} 
 ];
 
-// SHUFFLE
+/* ================= HELPERS ================= */
+function escapeHtml(s){
+  return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
+}
+
 function shuffleArray(a){
   for(let i=a.length-1;i>0;i--){
     const j = Math.floor(Math.random()*(i+1));
     [a[i], a[j]] = [a[j], a[i]];
   }
-}
-function escapeHtml(s){
-  return String(s).replaceAll('&','&amp;')
-                  .replaceAll('<','&lt;')
-                  .replaceAll('>','&gt;')
-                  .replaceAll('"','&quot;')
-                  .replaceAll("'",'&#39;');
+  return a;
 }
 
-// RENDER
-function renderMCQs(){
+/* ================= RENDER (shuffle MCQs only) ================= */
+let shuffledQuestions = [];
+document.addEventListener('DOMContentLoaded', () => {
+  // deep copy and shuffle only the MCQs (mcQuestions)
+  shuffledQuestions = shuffleArray(JSON.parse(JSON.stringify(mcQuestions)));
   const container = document.getElementById('questionsContainer');
   container.innerHTML = '';
-  const qs = JSON.parse(JSON.stringify(mcQuestions));
-  shuffleArray(qs);
-  qs.forEach((q) => {
-    shuffleArray(q.options);
+
+  shuffledQuestions.forEach((q, idx) => {
+    const displayNumber = idx + 3; // Q3..Q52
     const qDiv = document.createElement('div');
     qDiv.className = 'question';
     qDiv.id = 'q' + q.id;
 
     const header = document.createElement('div');
     header.className = 'q-header';
-    header.innerHTML = `<div class="q-number">${q.id}</div>
-                        <div class="q-text">${escapeHtml(q.text)}</div>`;
+    header.innerHTML = `<div class="q-number">${displayNumber}</div><div class="q-text">${escapeHtml(q.text)}</div>`;
     qDiv.appendChild(header);
 
     const optionsDiv = document.createElement('div');
     optionsDiv.className = 'options';
+
     q.options.forEach((opt, oi) => {
       const optId = `q${q.id}_opt${oi}`;
       const label = document.createElement('label');
       label.className = 'option-label';
       label.htmlFor = optId;
-      label.innerHTML = `<input id="${optId}" type="radio" name="q_${q.id}" 
-                          value="${escapeHtml(opt.t)}" data-correct="${opt.c}" required> 
-                         <span>${escapeHtml(opt.t)}</span>`;
+      label.innerHTML = `<input id="${optId}" type="radio" name="q_${q.id}" value="${escapeHtml(opt.t)}"> <span>${escapeHtml(opt.t)}</span>`;
       optionsDiv.appendChild(label);
     });
+
     qDiv.appendChild(optionsDiv);
     container.appendChild(qDiv);
   });
-}
-
-// SCORE
-function collectAndScore(){
-  let score = 0;
-  for(const q of mcQuestions){
-    const radios = document.getElementsByName(`q_${q.id}`);
-    for(const r of radios){
-      if(r.checked && r.dataset.correct === "true") score++;
-    }
-  }
-  return score;
-}
-
-// FORM HANDLER
-document.getElementById('testForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const total = mcQuestions.length;
-  const score = collectAndScore();
-
-  document.getElementById('scoreText').innerText = 
-    `Your score: ${score} / ${total}`;
-  document.getElementById('resultBox').style.display = 'block';
-  window.scrollTo({top:0, behavior:'smooth'});
 });
 
-renderMCQs();
+/* ================= SUBMIT HANDLER (offline CSV download) ================= */
+document.getElementById('wordForm').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  if(!name || !email){
+    alert('Please enter name and email.');
+    return;
+  }
+
+  // collect answers and check completeness
+  const answers = [];
+  let allAnswered = true;
+  for(const q of shuffledQuestions){
+    const sel = document.querySelector(`input[name="q_${q.id}"]:checked`);
+    const ansText = sel ? sel.value : '';
+    if(!ansText) allAnswered = false;
+    answers.push({ id: q.id, answer: ansText });
+  }
+
+  if(!allAnswered){
+    if(!confirm('Some questions are unanswered. Do you want to submit anyway?')) return;
+  }
+
+  // score
+  let score = 0;
+  for(const q of shuffledQuestions){
+    const sel = document.querySelector(`input[name="q_${q.id}"]:checked`);
+    const ansText = sel ? sel.value : '';
+    const correct = q.options.find(o => o.c);
+    if(correct && ansText === correct.t) score++;
+  }
+
+  const total = shuffledQuestions.length;
+  // show only final score
+  document.getElementById('result').textContent = `Your score: ${score} / ${total}`;
+
+  // build CSV content
+  let csv = '';
+  // header info
+  csv += 'Timestamp,Name,Email,Score,Total\n';
+  csv += `"${new Date().toISOString()}","${name.replace(/"/g,'""')}","${email.replace(/"/g,'""')}",${score},${total}\n\n`;
+  csv += 'QuestionID,Answer\n';
+  answers.forEach(a => {
+    csv += `${a.id},"${(a.answer||'').replace(/"/g,'""')}"\n`;
+  });
+
+  // trigger CSV download
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const filename = `${name.replace(/\s+/g,'_')}_word_quiz_${new Date().toISOString().slice(0,19).replace(/[:T]/g,'-')}.csv`;
+  if (navigator.msSaveBlob) { // IE 10+
+    navigator.msSaveBlob(blob, filename);
+  } else {
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    link.setAttribute("href", url);
+    link.setAttribute("download", filename);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  }
+
+  // disable inputs to prevent re-submit
+  document.querySelectorAll('#wordForm input, #wordForm button').forEach(el => el.disabled = true);
+});
 </script>
 </body>
 </html>
