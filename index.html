@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Datamaker MS-Excel Multiple Choice Test (Offline)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Microsoft Excel PM MC Test Offline</title>
 <style>
-:root {
+:root{
   --accent:#107C41;
   --card-bg:#fff;
   --page-bg:#f4f4f4;
   --muted:#666;
   --maxw:980px;
 }
-body {
+body{
   margin:0;
-  font-family:"Segoe UI",Roboto,Arial,sans-serif;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background:var(--page-bg);
   color:#111;
 }
@@ -26,57 +26,59 @@ body {
   font-size:1.25rem;
   font-weight:600;
 }
-.wrap {
+.wrap{
   max-width:var(--maxw);
   margin:28px auto;
   padding:0 16px;
 }
-.card {
+.card{
   background:var(--card-bg);
   border-radius:10px;
   box-shadow:0 6px 18px rgba(16,124,65,0.06);
   padding:28px;
 }
-.intro {
+.intro{
   color:var(--muted);
   margin-bottom:18px;
   font-size:0.95rem;
 }
-.meta {
+.meta{
   display:flex;
   gap:12px;
   flex-wrap:wrap;
   margin-bottom:18px;
 }
-.meta .field { flex:1 1 260px; }
-label.input-label {
+.meta .field{
+  flex:1 1 260px;
+}
+label.input-label{
   display:block;
   font-weight:600;
   margin-bottom:6px;
 }
-input[type="text"], input[type="email"] {
+input[type="text"], input[type="email"]{
   width:100%;
   padding:10px 12px;
   border-radius:8px;
   border:1px solid #d0d0d0;
   font-size:0.98rem;
 }
-hr.sep { border:none; height:1px; background:#eef2f0; margin:20px 0; }
-.question {
+hr.sep{ border:none; height:1px; background:#eef2f0; margin:20px 0; }
+.question{
   margin-bottom:14px;
   padding:12px;
   border-radius:8px;
   background:#fcfffd;
   border:1px solid #f0f6f1;
 }
-.q-header {
+.q-header{
   display:flex;
   gap:12px;
   align-items:center;
   margin-bottom:8px;
   flex-wrap:wrap;
 }
-.q-number {
+.q-number{
   min-width:36px;
   height:36px;
   border-radius:50%;
@@ -87,18 +89,18 @@ hr.sep { border:none; height:1px; background:#eef2f0; margin:20px 0; }
   justify-content:center;
   font-weight:700;
 }
-.q-text {
+.q-text{
   font-weight:600;
   font-size:0.98rem;
   flex:1 1 auto;
 }
-.options {
+.options{
   margin-top:8px;
   display:flex;
   flex-direction:column;
   gap:8px;
 }
-.option-label {
+.option-label{
   display:flex;
   gap:12px;
   align-items:center;
@@ -107,16 +109,16 @@ hr.sep { border:none; height:1px; background:#eef2f0; margin:20px 0; }
   border:1px solid #eee;
   cursor:pointer;
 }
-.option-label:hover { background:#fafdf9; }
-.option-label input { transform:scale(1.02); margin:0; }
-.submit-row {
+.option-label:hover{ background:#fafdf9; }
+.option-label input{ transform:scale(1.02); margin:0; }
+.submit-row{
   margin-top:20px;
   display:flex;
   justify-content:flex-end;
   gap:12px;
   align-items:center;
 }
-button.submit-btn {
+button.submit-btn{
   background:var(--accent);
   color:white;
   padding:12px 18px;
@@ -126,68 +128,72 @@ button.submit-btn {
   cursor:pointer;
   font-size:1rem;
 }
-button.submit-btn:hover { background:#0e6b39; }
-.note { color:var(--muted); font-size:0.95rem; margin-top:6px; }
-.result-box {
+button.submit-btn:hover{ background:#0e6b39; }
+.note{ color:var(--muted); font-size:0.95rem; margin-top:6px; }
+
+.result-box{
   background:white;
-  border-radius:10px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  border-radius:8px;
   padding:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  margin-top:20px;
   text-align:center;
-  max-width:520px;
-  margin:20px auto;
 }
-.result-box h2 { margin:0 0 10px; }
-.result-pass { color:green; font-weight:bold; }
-.result-fail { color:red; font-weight:bold; }
-.result-meta { margin:8px 0 14px; }
-.result-actions { display:flex; gap:12px; justify-content:center; margin-top:12px; }
-.btn { padding:10px 14px; border-radius:8px; border:none; cursor:pointer; font-weight:600; }
-.btn-download { background:#0078d4; color:#fff; }
-.btn-close { background:#e6e6e6; }
-.hide { display:none; }
-@media (max-width:720px){ .meta{ flex-direction:column; } .submit-row{ justify-content:center; } }
+.result-box h2{
+  margin:0;
+  color:var(--accent);
+}
+.result-box p{
+  margin:8px 0 0;
+  font-size:1.1rem;
+}
+@media (max-width:720px){
+  .meta{ flex-direction:column; }
+  .submit-row{ justify-content:center; }
+}
 </style>
 </head>
 <body>
-<div class="topbar">Datamaker MS-Excel Multiple Choice Test (Offline)</div>
+<div class="topbar">Microsoft Excel PM MC Test Offline</div>
+
 <div class="wrap">
   <div class="card">
     <p class="intro">
-      Hi! Please complete this quiz to evaluate your training.  
-      <br><strong>Total: 52 Questions</strong>
+      Hi! Please complete this quiz to help us evaluate your understanding of Excel concepts.<br>
+      <strong>Total: 52 Questions</strong>
     </p>
 
     <form id="testForm" autocomplete="off">
       <div class="meta">
         <div class="field">
-          <label class="input-label" for="name">Q1 — Name *</label>
+          <label class="input-label" for="name">Name *</label>
           <input id="name" name="name" type="text" required />
         </div>
         <div class="field">
-          <label class="input-label" for="email">Q2 — Email *</label>
+          <label class="input-label" for="email">Email *</label>
           <input id="email" name="email" type="email" required />
         </div>
       </div>
 
       <hr class="sep" />
-
       <div id="questionsContainer"></div>
 
       <div class="submit-row">
-        <div class="note">Note: Leaving or refreshing will restart the test and reshuffle questions.</div>
+        <div class="note">Note: Refreshing will reshuffle questions.</div>
         <button type="submit" class="submit-btn">Submit</button>
       </div>
     </form>
 
-    <div id="resultBox" class="result-box hide"></div>
+    <div id="resultBox" class="result-box" style="display:none;">
+      <h2>Quiz Completed</h2>
+      <p id="scoreText"></p>
+    </div>
   </div>
 </div>
 
 <script>
-/* ================= MC QUESTIONS (Q3..Q52) ================= */
-const mcQuestions = [
-    { id: 3, text: "What is the keyboard shortcut to open the Filter menu in Excel?", options: [
+// QUESTIONS
+const mcQuestions = [{ id: 3, text: "What is the keyboard shortcut to open the Filter menu in Excel?", options: [
         {t:"CTRL + F", c:false},
         {t:"CTRL + L", c:false},
         {t:"CTRL + SHIFT + L", c:true},
@@ -489,28 +495,39 @@ const mcQuestions = [
       ]}
 ];
 
-/* ================ UTILS ================ */
-function shuffleArray(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } }
-function escapeHtml(s){ return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#39;"); }
+// SHUFFLE
+function shuffleArray(a){
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+}
+function escapeHtml(s){
+  return String(s).replaceAll('&','&amp;')
+                  .replaceAll('<','&lt;')
+                  .replaceAll('>','&gt;')
+                  .replaceAll('"','&quot;')
+                  .replaceAll("'",'&#39;');
+}
 
-/* ================ RENDER QUESTIONS (shuffle MCQs only) ================ */
-let renderedQuestions = []; // deep-copied & shuffled version used for display
+// RENDER
 function renderMCQs(){
   const container = document.getElementById('questionsContainer');
   container.innerHTML = '';
-  renderedQuestions = JSON.parse(JSON.stringify(mcQuestions));
-  shuffleArray(renderedQuestions); // shuffle MCQ order
-  renderedQuestions.forEach((q, idx) => {
-    shuffleArray(q.options); // shuffle options for each question
+  const qs = JSON.parse(JSON.stringify(mcQuestions));
+  shuffleArray(qs);
+  qs.forEach((q) => {
+    shuffleArray(q.options);
     const qDiv = document.createElement('div');
     qDiv.className = 'question';
     qDiv.id = 'q' + q.id;
+
     const header = document.createElement('div');
     header.className = 'q-header';
-    // display index-based number (Q3..Q52) so numbering is consistent to user expectations
-    const displayNum = 3 + idx;
-    header.innerHTML = `<div class="q-number">${displayNum}</div><div class="q-text">${escapeHtml(q.text)}</div>`;
+    header.innerHTML = `<div class="q-number">${q.id}</div>
+                        <div class="q-text">${escapeHtml(q.text)}</div>`;
     qDiv.appendChild(header);
+
     const optionsDiv = document.createElement('div');
     optionsDiv.className = 'options';
     q.options.forEach((opt, oi) => {
@@ -518,8 +535,9 @@ function renderMCQs(){
       const label = document.createElement('label');
       label.className = 'option-label';
       label.htmlFor = optId;
-      // include data-correct attr for scoring
-      label.innerHTML = `<input id="${optId}" type="radio" name="q_${q.id}" value="${escapeHtml(opt.t)}" data-correct="${opt.c}"> <span>${escapeHtml(opt.t)}</span>`;
+      label.innerHTML = `<input id="${optId}" type="radio" name="q_${q.id}" 
+                          value="${escapeHtml(opt.t)}" data-correct="${opt.c}" required> 
+                         <span>${escapeHtml(opt.t)}</span>`;
       optionsDiv.appendChild(label);
     });
     qDiv.appendChild(optionsDiv);
@@ -527,113 +545,30 @@ function renderMCQs(){
   });
 }
 
-/* ================ COLLECT & SCORE ================ */
-function collectAnswers(){
-  const answers = [];
+// SCORE
+function collectAndScore(){
+  let score = 0;
   for(const q of mcQuestions){
     const radios = document.getElementsByName(`q_${q.id}`);
-    let selectedValue = '';
-    let selectedCorrect = false;
     for(const r of radios){
-      if(r.checked){
-        selectedValue = r.value;
-        selectedCorrect = (r.dataset.correct === "true");
-        break;
-      }
+      if(r.checked && r.dataset.correct === "true") score++;
     }
-    answers.push({ id: q.id, answer: selectedValue, correct: selectedCorrect });
   }
-  return answers;
+  return score;
 }
 
-/* ================ CSV DOWNLOAD ================ */
-function downloadCSV(payload){
-  // payload: { timestamp, name, email, score, total, answers: [ {id,answer,correct} ... ] }
-  let csv = '';
-  csv += 'Timestamp,Name,Email,Score,Total\n';
-  csv += `"${payload.timestamp}","${payload.name.replace(/"/g,'""')}","${payload.email.replace(/"/g,'""')}",${payload.score},${payload.total}\n\n`;
-  csv += 'QuestionID,Answer,Correct\n';
-  payload.answers.forEach(a => {
-    csv += `${a.id},"${(a.answer||'').replace(/"/g,'""')}",${a.correct}\n`;
-  });
-
-  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-  const filename = `${payload.name.replace(/\s+/g,'_')}_excel_quiz_${new Date().toISOString().slice(0,19).replace(/[:T]/g,'-')}.csv`;
-  if (navigator.msSaveBlob) {
-    navigator.msSaveBlob(blob, filename);
-  } else {
-    const link = document.createElement('a');
-    const url = URL.createObjectURL(blob);
-    link.href = url;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-  }
-}
-
-/* ================ FORM SUBMIT & UI ================ */
+// FORM HANDLER
 document.getElementById('testForm').addEventListener('submit', function(e){
   e.preventDefault();
-  if(!this.checkValidity()){
-    this.reportValidity();
-    return;
-  }
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const answers = collectAnswers();
-  let score = 0;
-  for(const a of answers) if(a.correct) score++;
   const total = mcQuestions.length;
-  const percent = ((score/total)*100).toFixed(1);
-  const pass = percent >= 70;
+  const score = collectAndScore();
 
-  const resultBox = document.getElementById('resultBox');
-  const passText = pass ? 'PASS ✅' : 'FAIL ❌';
-  resultBox.innerHTML = `
-    <h2>Your score</h2>
-    <div class="result-meta"><strong>${score} / ${total}</strong> &nbsp; (${percent}%)</div>
-    <div class="${pass ? 'result-pass' : 'result-fail'}" style="font-size:18px">${passText}</div>
-    <div style="margin-top:12px; color:var(--muted); font-size:0.95rem">Name: ${escapeHtml(name)} &nbsp; • &nbsp; Email: ${escapeHtml(email)}</div>
-    <div class="result-actions">
-      <button class="btn btn-download" id="downloadBtn">Download CSV</button>
-      <button class="btn btn-close" id="closeBtn">Close</button>
-    </div>
-    <div style="margin-top:10px; color:var(--muted); font-size:0.9rem">CSV contains full answers and whether each was marked correct.</div>
-  `;
-  resultBox.classList.remove('hide');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-
-  // attach download handler
-  document.getElementById('downloadBtn').addEventListener('click', function(){
-    const payload = {
-      timestamp: new Date().toISOString(),
-      name, email, score, total,
-      answers
-    };
-    downloadCSV(payload);
-  });
-
-  // attach close handler
-  document.getElementById('closeBtn').addEventListener('click', function(){
-    resultBox.classList.add('hide');
-    document.getElementById('testForm').reset();
-    renderMCQs(); // reshuffle
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // disable form inputs to prevent accidental edits until close
-  Array.from(document.querySelectorAll('#testForm input')).forEach(i => i.disabled = true);
+  document.getElementById('scoreText').innerText = 
+    `Your score: ${score} / ${total}`;
+  document.getElementById('resultBox').style.display = 'block';
+  window.scrollTo({top:0, behavior:'smooth'});
 });
 
-/* reset inputs when leaving the page (restart-on-leave) */
-window.addEventListener('beforeunload', function(e){
-  const f = document.getElementById('testForm');
-  if(f) f.reset();
-});
-
-/* init render */
 renderMCQs();
 </script>
 </body>
